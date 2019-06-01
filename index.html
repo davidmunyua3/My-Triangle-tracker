@@ -8,6 +8,9 @@
 
 </head>
 <body>
+ <div class="container">
+	<P>Insert lengths of a triangle in slots labled side A, side B and side C to find out whether a triangle is isosceles, equilateral, scalene or NOT a triangle at all</p>
+ </div>
 	<div class="container">
   	 <div class="row">
 
@@ -32,21 +35,7 @@
  	 				    <button type="button" class="btn btn-success position" onclick="tracker()">Submit</button>
  	 			 	 </div>
 
-<script>
 
-	function tracker(){
-		var sideA = document.getElementById("side-a").value;
-		var sideB = document.getElementById("side-b").value;
-		var sideC =document.getElementById("side-c").value;
-
-
-	}
-
-	function evaluateTypeOfTriagle(sideA,sideB,sideC){
-
-	}
-
-</script>
 
 		 </div>
     </div>
@@ -55,6 +44,37 @@
 
 
 
+		<script>
 
+			function tracker(){
+				var sideA = parseInt(document.getElementById("side-a").value);
+				var sideB = parseInt(document.getElementById("side-b").value);
+				var sideC =parseInt(document.getElementById("side-c").value);
+
+				evaluateTypeOfTriagle(sideA,sideB,sideC);
+			}
+
+			function evaluateTypeOfTriagle(sideA,sideB,sideC){
+					if(sideA === sideB && sideB === sideC){
+						alert('equilateral')
+					}else if((sideA === sideB || sideB === sideC || sideA === sideC) && !(sideA === sideB && sideB === sideC)){
+						alert("isosceles")
+					}else if(!(sideA === sideB && sideB === sideC)){
+							var sumAB = sideA + sideB;
+							var sumBC = sideB + sideC;
+							var sumAC = sideA + sideC;
+							var sumsArray = [sumAB,sumBC,sumAC];
+
+
+							if(sumAB > sideC && sumBC > sideA && sumAC > sideB ){
+								alert('scalene');
+							}else{
+								alert('not a triangle')
+							}
+
+					}
+			}
+
+		</script>
 </body>
 </html>
