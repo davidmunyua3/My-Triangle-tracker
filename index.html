@@ -58,19 +58,19 @@
 					if(sideA === sideB && sideB === sideC){
 						alert('equilateral')
 					}else if((sideA === sideB || sideB === sideC || sideA === sideC) && !(sideA === sideB && sideB === sideC)){
-						alert("isosceles")
-					}else if(!(sideA === sideB && sideB === sideC)){
-							var sumAB = sideA + sideB;
-							var sumBC = sideB + sideC;
-							var sumAC = sideA + sideC;
-							var sumsArray = [sumAB,sumBC,sumAC];
+										alert("isosceles")
+									}else if(!(sideA === sideB && sideB === sideC)){
+											var sumAB = sideA + sideB;
+											var sumBC = sideB + sideC;
+											var sumAC = sideA + sideC;
+											var sumsArray = [sumAB,sumBC,sumAC];
 
 
-							if(sumAB > sideC && sumBC > sideA && sumAC > sideB ){
-								alert('scalene');
-							}else{
-								alert('not a triangle')
-							}
+											if(sumAB > sideC && sumBC > sideA && sumAC > sideB ){
+												alert('scalene');
+											}else{
+												alert('not a triangle')
+											}
 
 					}
 			}
