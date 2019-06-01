@@ -1,3 +1,18 @@
-.position {
-  float: right;
+.masthead {
+  float: none;
+}
+.masthead
+ {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.element
+{
+  .center-block();
+}
+.masthead
+{
+  background-color: @green;
 }
