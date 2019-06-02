@@ -2,29 +2,32 @@
 <html>
 <head>
 	<title>Triangle Tracker</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link href="css/styles.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="images/favicon.ico">
 
 </head>
 <body>
-	<div class="masthead">
+	<div class="jumbotron text centre">
+		<h1 class="display-h1"> Smart triangle tracker</h1>
+	</div>
 
  <div class="container">
 	 <div class="text-centre">
 	 <div class="row">
 		<div class"col-md-12">
-			<h1 class="alert-heading"> Smart triangle tracker</h1>
-			<h2> Functionality</h2>
-	<P>Insert lengths of a triangle in slots labled side A, side B and side C to find out whether a triangle is isosceles, equilateral, scalene or not a triangle at all</p>
-		<h3> About triangles</h3>
+
+			<h2 class="display-h2">How the stt works!</h2>
+	<P>By entering lengths of a triangle in slots labled side A, side B and side C, the triangle tracker alerts whether the triangle is isosceles, equilateral, scalene or not a triangle at all</p>
+		<h3 class="text-primary">Types of triangles</h3>
 		<ol>
-			<li>
-    <p>For an equilateral triangle, all sides must be equal.</p>
-    <p>For an isosceles triangle, two sides are exactly equal.</p>
-    <p>For a scalene triangle, none of the sides is equal. However, the sum of any two sides of the triangle must be greater than the third side.<p>
-    <p>Most importantly, if the sum of any two sides of the triangle is equal to or less than the third remaining side, then a triangle CANNOT be formed using those values. (For example, the values 9,4 & 3 cannot form a triangle.)</p>
-	   </li>
+
+    <li>For an equilateral triangle, all sides must be equal.</li>
+    <li>For an isosceles triangle, two sides are exactly equal.</li>
+    <li>For a scalene triangle, none of the sides is equal. However, the sum of any two sides of the triangle must be greater than the third side.</li>
+    <li>Most importantly, if the sum of any two sides of the triangle is equal to or less than the third remaining side, then a triangle CANNOT be formed using those values. (For example, the values 9,4 & 3 cannot form a triangle.)</li>
 
 		</ol>
 
@@ -45,7 +48,7 @@
 
        <div class="col-md-4">
 				 	<div class="form-group">
-				 		 <label for="side-b">Side B</label>
+				 		 <label for="side-b"	>Side B</label>
              <input type="number" class="form-control" id="side-b" placeholder="Enter side B">
 			 </div>
 		 </div>
@@ -75,11 +78,11 @@
 
 
 		<script>
-
+// declare variables sideA, sideB and sideC
 			function tracker(){
 				var sideA = parseInt(document.getElementById("side-a").value);
 				var sideB = parseInt(document.getElementById("side-b").value);
-				var sideC =parseInt(document.getElementById("side-c").value);
+				var sideC = parseInt(document.getElementById("side-c").value);
 
 				evaluateTypeOfTriagle(sideA,sideB,sideC);
 			}
@@ -104,6 +107,7 @@
 
 					}
 			}
+
 
 		</script>
 </body>
